@@ -13,9 +13,11 @@ header {
     background-color: #65c9ff;
 }
 
-header h1 {
+header a {
     font-size: 40px;
     margin: 0;
+    color:#fff;
+    text-decoration: none;
 }
 
 #profileInfoBlock {

@@ -1,0 +1,180 @@
+* {
+    font-family: Dosis;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #2f2f2f;
+}
+
+header {
+    display: flex;
+    align-items: center; /* vertical center */
+    padding: 0 20px; /* side padding */
+    height: 150px;
+    color: #fff;
+    background-color: #181818;
+}
+
+header a {
+    font-size: 40px;
+    margin: 0;
+    color:#fff;
+    text-decoration: none;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 90%;
+    margin: 50px auto;
+    background-color: #252525;
+    border: 1px solid #181818;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#innerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    position: relative;
+}
+
+#mainContainer h2 {
+    color: #fff;
+    background-color: #181818;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1.3rem;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  user-select: none;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + .custom-checkbox {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + .custom-checkbox::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+#passLength {
+    width: 120px;
+    height: 40px;
+    background-color: #181818;
+    border: 1px solid #4d4a4a;
+    color: #fff;
+    text-indent: 10px;
+}
+
+#passLength::placeholder {
+    text-align: center;
+    text-indent: 0;
+}
+
+#generateBtn {
+    background-color: #181818;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #fbfbfb;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    transition: background 0.2s;
+}
+
+#generateBtn:hover {
+    background-color: #333;
+}
+
+#generatedPassWrapper {
+     position: relative;
+     width: 100%;
+     margin-top: 20px;
+}
+
+#generatedPass {
+     display: block;
+     width: 100%;
+     padding: 10px 45px 10px 10px;
+     text-align: center;
+     color: #fff;
+     background-color: #181818;
+     border: 1px solid #4d4a4a;
+     box-sizing: border-box;
+}
+
+#copyBtn {
+    position: absolute;
+    top: 28%;
+    right: 1px;
+    transform: translateY(-50%);
+    background: #2f2f2f;
+    padding: 10.7px;
+    cursor: pointer;
+    color: #8f8f8f;
+}
+
+#msg {
+     text-align: center;
+     color: #fff;
+     margin-top: 12px;
+     min-height: 20px;
+}
+
+@media (max-width: 480px) {
+  #mainContainer {
+    width: 95%;
+  }
+
+  #mainContainer h2 {
+    font-size: 1.1rem;
+    padding: 10px 0;
+  }
+
+  #passLength {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  #generatedPass {
+    font-size: 0.9rem;
+  }
+}
